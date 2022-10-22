@@ -1,7 +1,8 @@
 import "./assets/css/style.css";
 
-const title = document.createElement("h3");
-title.textContent = "Webpack made easy!";
+import Controller from "./controllers/controller";
 
-const page = document.querySelector("body");
-page.append(title);
+const app = new Controller();
+
+app.initializeView();
+app.run(app.model, app.view);
